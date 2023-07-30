@@ -1,0 +1,167 @@
+{
+  "id": "wrk_16ffc986d83944b293d0f680a23d9024",
+  "name": "loren-server",
+  "workspace": {
+    "_id": "wrk_16ffc986d83944b293d0f680a23d9024",
+    "type": "Workspace",
+    "parentId": "proj_b479dc1069314b97b6c59f4485501eb3",
+    "modified": 1690746698877,
+    "created": 1690746698877,
+    "name": "loren-server",
+    "description": "",
+    "scope": "collection"
+  },
+  "meta": {
+    "_id": "wrkm_c7dcb1d5a18c41e4b5dd94f7d0a712c8",
+    "created": 1690746698920,
+    "modified": 1690746712196,
+    "parentId": "wrk_16ffc986d83944b293d0f680a23d9024",
+    "type": "WorkspaceMeta",
+    "activeActivity": null,
+    "activeEnvironmentId": "env_996e2320e9934f7993be03f6d146e714",
+    "activeRequestId": "req_12887f6ea9c74b9a8f22d3bc11fcf1d5"
+  },
+  "requests": [
+    {
+      "type": "group",
+      "id": "fld_4a1b4885a7934ae2bafe0c77a2a9f95e",
+      "group": {
+        "_id": "fld_4a1b4885a7934ae2bafe0c77a2a9f95e",
+        "type": "RequestGroup",
+        "parentId": "wrk_16ffc986d83944b293d0f680a23d9024",
+        "modified": 1690746698899,
+        "created": 1690746698899,
+        "name": "User",
+        "description": "",
+        "environment": {},
+        "environmentPropertyOrder": null,
+        "metaSortKey": -1690279349734
+      },
+      "children": [
+        {
+          "type": "request",
+          "id": "req_12887f6ea9c74b9a8f22d3bc11fcf1d5",
+          "meta": {
+            "_id": "reqm_c8d03229aae544aea4c169730eeba11d",
+            "type": "RequestMeta",
+            "parentId": "req_12887f6ea9c74b9a8f22d3bc11fcf1d5",
+            "modified": 1690746712198,
+            "created": 1690746712198,
+            "previewMode": "friendly",
+            "responseFilter": "",
+            "responseFilterHistory": [],
+            "activeResponseId": null,
+            "savedRequestBody": {},
+            "pinned": false,
+            "lastActive": 1690746712196,
+            "downloadPath": null,
+            "expandedAccordionKeys": {}
+          },
+          "request": {
+            "_id": "req_12887f6ea9c74b9a8f22d3bc11fcf1d5",
+            "type": "Request",
+            "parentId": "fld_4a1b4885a7934ae2bafe0c77a2a9f95e",
+            "modified": 1690746698901,
+            "created": 1690746698901,
+            "url": "{{ _.api_url }}/user",
+            "name": "create user",
+            "description": "",
+            "method": "POST",
+            "body": {
+              "mimeType": "application/json",
+              "text": "{\n\t\"email\": \"john@doe.com\",\n\t\"password\": \"johndoe12345\",\n\t\"role\": \"student\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "authentication": {},
+            "metaSortKey": -1690279352343,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global"
+          }
+        }
+      ],
+      "meta": {
+        "_id": "fldm_25eccadc5cf440a799a3a1e8ed3c35f6",
+        "type": "RequestGroupMeta",
+        "parentId": "fld_4a1b4885a7934ae2bafe0c77a2a9f95e",
+        "modified": 1690746711791,
+        "created": 1690746711791,
+        "collapsed": false
+      }
+    }
+  ],
+  "environments": [
+    {
+      "_id": "env_68fe843e2269442f990429abc660f186",
+      "type": "Environment",
+      "parentId": "wrk_16ffc986d83944b293d0f680a23d9024",
+      "modified": 1690746698880,
+      "created": 1690746698880,
+      "name": "Base Environment",
+      "data": {
+        "api_url": ""
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "api_url"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1690278492741
+    },
+    {
+      "_id": "env_996e2320e9934f7993be03f6d146e714",
+      "type": "Environment",
+      "parentId": "env_68fe843e2269442f990429abc660f186",
+      "modified": 1690746698882,
+      "created": 1690746698882,
+      "name": "Dev",
+      "data": {
+        "api_url": "http://localhost:3000/api"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "api_url"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1690278515485
+    },
+    {
+      "_id": "env_eea06e49c67c470aa69e2c95cbf2f9b1",
+      "type": "Environment",
+      "parentId": "env_68fe843e2269442f990429abc660f186",
+      "modified": 1690746698887,
+      "created": 1690746698887,
+      "name": "Prod",
+      "data": {},
+      "dataPropertyOrder": {},
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1690278524061
+    }
+  ],
+  "apiSpec": {
+    "_id": "spc_1e055e343e21414ea3be6aa90fd93ce8",
+    "type": "ApiSpec",
+    "parentId": "wrk_16ffc986d83944b293d0f680a23d9024",
+    "modified": 1690746698914,
+    "created": 1690746698912,
+    "fileName": "loren-server",
+    "contents": "",
+    "contentType": "yaml"
+  },
+  "unitTestSuites": []
+}
